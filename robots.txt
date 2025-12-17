@@ -1,0 +1,7 @@
+# robots.txt for Samstev Lensman
+# Replace https://yourdomain.com with your real site URL
+
+User-agent: *
+Disallow:
+
+Sitemap: https://yourdomain.com/sitemap.xml

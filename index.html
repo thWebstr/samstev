@@ -6,15 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samstev Lensman - Capturing Moments, Capturing Timeless Stories</title>
   <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/m_query.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
   <meta name="description"
-    content="Welcome to Samstev Lensman, where we specialize in capturing your most cherished moments through the art of photography. Our services include wedding photography, portrait sessions, event coverage, and commercial shoots. Let us help you tell your story with timeless images that you'll treasure forever.">
+    content="Welcome to Samstev Lensman — professional photography for weddings, portraits, events and commercial projects. Based on creative storytelling and technical excellence, we craft timeless images that capture emotion and atmosphere. Book a session or view our portfolio.">
   <meta name="keywords"
-    content="Photography, Wedding Photography, Portrait Photography, Event Photography, Commercial Photography, Samstev Lensman, Professional Photographer, Timeless Stories, Capturing Moments">
+    content="Photography, Wedding Photography, Portrait Photography, Event Photography, Commercial Photography, Family Photography, Engagement Photography, Newborn Photography, Fashion Photography, Headshots, Product Photography, Photo Retouching, Drone Photography, Destination Wedding, Photography Packages, Affordable Photographer, Corporate Photography, Brand Photography, Lifestyle Photography, Photo Sessions, Photography Services, Visual Storytelling, Creative Photographer, Samstev Lensman">
+  <meta name="author" content="Samstev Lensman">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Samstev Lensman - Capturing Moments, Capturing Timeless Stories">
+  <meta property="og:description"
+    content="Professional photography services: weddings, portraits, events, commercial shoots and more. Explore the portfolio and book your session.">
+  <meta property="og:image" content="images/hero-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Samstev Lensman - Capturing Moments, Capturing Timeless Stories">
+  <meta name="twitter:description"
+    content="Professional photography services: weddings, portraits, events, commercial shoots and more. Explore the portfolio and book your session.">
+  <meta name="twitter:image" content="images/hero-image.jpg">
+  <link rel="canonical" href="https://yourdomain.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Samstev Lensman",
+    "url": "https://yourdomain.com/",
+    "logo": "https://yourdomain.com/images/logo.png",
+    "image": "https://yourdomain.com/images/hero-image.jpg",
+    "description": "Professional photographer specializing in wedding, portrait, event and commercial photography. Based on creative storytelling and technical excellence.",
+    "sameAs": [
+      "https://www.facebook.com/samuel.stephen.315080",
+      "https://www.instagram.com/samstev_lensman269?igsh=MXAxaWt6dHF1bGE1eg==",
+      "https://x.com/samstev225?t=w0C_TBRI7AKppU-ulTHghQ&s=09"
+    ]
+  }
+  </script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -26,13 +59,13 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/portfolio.html">Portfolio</a></li>
         </ul>
       </nav>
       <div class="contact">
-        <a href="contact.html" class="contact-button">Contact</a>
+        <a href="pages/contact.html" class="contact-button">Contact</a>
       </div>
       <div class="hamburger">
         <span class="bar"></span>
@@ -43,16 +76,17 @@
     <div class="container">
       <div class="hero-txt">
         <h1>Hello there!,</h1>
-        <h1 class="name">I am Samstev Lensman</h1>
-        <p class="job-title">Professional Photographer</p>
-        <p class="short-desc">
+        <h1 class="name" data-anim-load="pop">I am Samstev Lensman</h1>
+        <p class="job-title" data-anim-load="fade-up">Professional Photographer</p>
+        <p class="short-desc" data-anim-load="fade-up">
           I specialize in capturing the beauty of life through stunning photography, from portraits to landscapes and
-          everything in between. Every shot tells a unique story, crafted with passion an precision. Explore my gallery
-          and experience the art of storytelling through my lens.
+          everything in between. Every shot tells a unique story, crafted with passion and precision. Explore my gallery
+          and experience the art of storytelling through my lens — available for weddings, portraits, events and brand
+          work.
         </p>
         <div class="cta-btns">
-          <a href="portfolio.html" class="btn primary-btn">View Portfolio</a>
-          <a href="contact.html" class="btn secondary-btn">Get in Touch</a>
+          <a href="pages/portfolio.html" class="btn primary-btn" data-anim-load="pop">View Portfolio</a>
+          <a href="pages/contact.html" class="btn secondary-btn" data-anim-load="pop">Get in Touch</a>
           <div class="socials">
             <a href="https://www.facebook.com/samuel.stephen.315080" target="_blank" rel="noopener noreferrer"
               title="Samstev on Facebook" aria-label="Samstev on Facebook"><i class="fab fa-facebook-f"
@@ -66,8 +100,9 @@
           </div>
         </div>
       </div>
-      <div class="hero-img">
-        <img src="images/hero-image.jpg" alt="Samstev Lensman Photography">
+      <div class="hero-img" data-anim-load="float">
+        <img src="images/hero-image.jpg"
+          alt="Portrait of photographer Samstev Lensman at work — professional photographer" data-anim-load="float">
       </div>
     </div>
   </div>
@@ -80,14 +115,15 @@
         </div>
         <div class="about-txt">
           <h2>About Me</h2>
-          <h3>CAPTURING THE ESSENCE OF THE MOMENT AT EVERY FLASH</h3>
+          <h3>CAPTURING THE ESSENCE OF THE MOMENT AT EVERY FLASH, CREATING MEMORIES THAT NEVER FADE</h3>
           <p>
             ...a passionate photographer dedicated to capturing the essence of life's most precious
             moments. With years of experience in various photography styles, I strive to create images that tell a story
-            and evoke emotions. My approach combines technical expertise with a creative eye, ensuring each photograph is
+            and evoke emotions. My approach combines technical expertise with a creative eye, ensuring each photograph
+            is
             not just a picture, but a timeless memory.
           </p>
-          <a href="about.html" class="btn primary-btn">Learn More</a>
+          <a href="pages/about.html" class="btn primary-btn">Learn More</a>
         </div>
       </div>
     </div>
@@ -98,29 +134,139 @@
       <div class="services-content">
         <h2>My Services</h2>
         <div class="service-cards">
-          <div class="service-card">
-            <i class="fas fa-camera"></i>
+          <div class="service-card" data-animate="fade-up">
+            <div class="service-card-image-grid">
+              <img src="images/service-wedding1.jpg" alt="Wedding photography sample — Samstev Lensman">
+              <img src="images/service-wedding2.jpg" alt="Wedding photography sample 2 — Samstev Lensman">
+            </div>
             <h3>Wedding Photography</h3>
             <p>Capturing the magic of your special day with timeless and heartfelt images.</p>
           </div>
-          <div class="service-card">
-            <i class="fas fa-user"></i>
+          <div class="service-card" data-animate="fade-up">
+            <div class="service-card-image-grid">
+              <img src="images/service-portrait1.jpg" alt="Portrait photography sample — Samstev Lensman">
+              <img src="images/service-portrait2.jpg" alt="Portrait photography sample 2 — Samstev Lensman">
+            </div>
+            <h3>Portrait Photography</h3>
             <p>Creating stunning portraits that showcase your personality and style.</p>
           </div>
-          <div class="service-card">
-            <i class="fas fa-calendar-alt"></i>
+          <div class="service-card" data-animate="fade-up">
+            <div class="service-card-image-grid">
+              <img src="images/service-event1.jpg" alt="Event photography sample — Samstev Lensman">
+              <img src="images/service-event2.jpg" alt="Event photography sample 2 — Samstev Lensman">
+            </div>
+            <h3>Event Photography</h3>
             <p>Documenting your events with a keen eye for detail and storytelling.</p>
           </div>
-          <div class="service-card">
-            <i class="fas fa-briefcase"></i>
+          <div class="service-card" data-animate="fade-up">
+            <div class="service-card-image-grid">
+              <img src="images/service-commercial1.jpg" alt="Commercial photography sample — Samstev Lensman">
+              <img src="images/service-commercial2.jpg" alt="Commercial photography sample 2 — Samstev Lensman">
+            </div>
             <h3>Commercial Shoots</h3>
             <p>Producing high-quality images that elevate your brand and marketing efforts.</p>
           </div>
         </div>
-        <a href="services.html" class="btn primary-btn">Explore Services</a>
+        <a href="pages/services.html" class="btn primary-btn">Explore Services</a>
       </div>
     </div>
   </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="portfolio-content">
+        <h2>Portfolio Highlights</h2>
+        <div class="portfolio-gallery">
+          <div class="portfolio-item" data-animate="pop">
+            <img src="images/portfolio1.jpg" alt="Portfolio sample image 1 — wedding photography by Samstev Lensman">
+          </div>
+          <div class="portfolio-item" data-animate="pop">
+            <img src="images/portfolio2.jpg" alt="Portfolio sample image 2 — portrait photography by Samstev Lensman">
+          </div>
+          <div class="portfolio-item" data-animate="pop">
+            <img src="images/portfolio3.jpg" alt="Portfolio sample image 3 — event photography by Samstev Lensman">
+          </div>
+          <div class="portfolio-item" data-animate="pop">
+            <img src="images/portfolio4.jpg" alt="Portfolio sample image 4 — commercial photography by Samstev Lensman">
+          </div>
+          <div class="portfolio-item">
+            <img src="images/portfolio5.jpg" alt="Portfolio sample image 5 — creative portrait by Samstev Lensman">
+          </div>
+          <div class="portfolio-item">
+            <img src="images/portfolio6.jpg" alt="Portfolio sample image 6 — photography by Samstev Lensman">
+          </div>
+        </div>
+        <a href="pages/portfolio.html" class="btn primary-btn">View Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-content" data-animate="fade-up">
+        <h2>Get in Touch</h2>
+        <p>
+          Whether you're looking to book a session, inquire about services, or just want to say hello, I'd love to hear
+          from you! Reach out today and let's create something beautiful together.
+        </p>
+        <a href="pages/contact.html" class="btn primary-btn" data-animate="pop">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about" data-animate="fade-up">
+          <img src="images/logo.png" alt="Samstev Lensman logo — professional photographer" class="footer-logo-img">
+          <p class="small muted">Samstev Lensman — professional photographer capturing weddings, portraits, events and
+            commercial work.</p>
+          <div class="phone-n-email">
+            <div class="phone">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+2349037733412">+234 903 773 3412</a>
+            </div>
+            <div class="phone">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:stephenmondayoluwatobi225@gmail.com">stephenmondayoluwatobi225@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links-col" data-animate="fade-up">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter" data-animate="fade-up">
+          <h3>Join the Lens</h3>
+          <p class="small muted">Sign up for tips, availability and mini-session alerts.</p>
+          <form action="#" class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email" required>
+            <button type="submit" class="btn primary-btn">Subscribe</button>
+          </form>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/samuel.stephen.315080" target="_blank" rel="noopener noreferrer"
+              title="Samstev on Facebook" aria-label="Samstev on Facebook" class="social-btn"><i
+                class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/samstev_lensman269?igsh=MXAxaWt6dHF1bGE1eg==" target="_blank"
+              rel="noopener noreferrer" title="Samstev on Instagram" aria-label="Samstev on Instagram"
+              class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/samstev225?t=w0C_TBRI7AKppU-ulTHghQ&s=09" target="_blank" rel="noopener noreferrer"
+              title="Samstev on X (Twitter)" aria-label="Samstev on X (Twitter)" class="social-btn"><i
+                class="fab fa-x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="small">&copy; 2025 Samstev Lensman. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="scripts/global.js"></script>
   <script src="https://kit.fontawesome.com/63cb0e8efb.js" crossorigin="anonymous"></script>
