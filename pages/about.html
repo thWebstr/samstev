@@ -1,36 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Samstev Lensman | Professional Photographer</title>
-  <meta name="description"
-    content="Learn about Samstev Lensman — a professional photographer specializing in weddings, portraits and event photography. Discover the creative approach, experience and photography philosophy that brings stories to life.">
-  <meta name="keywords"
-    content="About Samstev Lensman, Photographer bio, Professional photographer, Wedding photographer, Portrait photographer, Event photographer, Photography experience, Photographic style">
-  <meta name="author" content="Samstev Lensman">
-  <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="../styles/animations.css">
-  <link rel="stylesheet" href="../styles/m_query.css">
-  <link rel="canonical" href="https://yourdomain.com/pages/about.html">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"About — Samstev Lensman",
-    "description":"Learn about Samstev Lensman — a professional photographer specializing in weddings, portraits and event photography."
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Samstev Lensman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,300;1,9..40,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-
 <body>
 
-</body>
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
 
+  <!-- ░░ NAV ░░ -->
+  <header class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">
+      <img src="../images/logo.png" alt="Samstev Lensman" />
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Work</a>
+      <a href="about.html" style="color: var(--off-white);">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="https://wa.me/2349037733412" class="nav__cta" target="_blank" rel="noopener">Book a Session</a>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ░░ INNER HERO ░░ -->
+  <section class="section" style="padding-top: 200px; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; background: var(--navy);">
+    <div class="reveal">
+      <p class="eyebrow">Behind the Lens</p>
+      <h1 class="section__title" style="font-size: clamp(48px, 8vw, 100px);">Stephen Samuel<br /><em>Oluwatobi</em></h1>
+      <p class="hero__sub" style="margin-top: 32px; max-width: 600px; font-size: 16px; line-height: 1.8; text-align: left;">
+        Creative director, visual storyteller, and emotional archivist. Based in Lagos, Nigeria with over a decade of capturing the world's most intimate and high-profile moments.
+      </p>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT CONTENT ░░ -->
+  <section class="section">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;" class="about-grid">
+      <div class="about-img reveal">
+        <img src="../images/samstev.jpg" alt="Stephen" style="width: 100%; border-radius: 16px; filter: grayscale(10%);" />
+      </div>
+      <div class="about-text reveal" data-delay="1">
+        <h2 style="font-family: var(--font-display); font-size: 32px; color: var(--off-white); margin-bottom: 24px;">The Philosophy</h2>
+        <p style="font-family: var(--font-body); font-size: 14px; color: var(--off-white-dim); line-height: 1.8; margin-bottom: 20px;">
+          Photography isn't just my profession; it's how I connect with the world and bring people's unique stories to life. Since establishing Samstev Lensman in 2012, I've dedicated myself to understanding the nuances of human emotion, light, and timing.
+        </p>
+        <p style="font-family: var(--font-body); font-size: 14px; color: var(--off-white-dim); line-height: 1.8; margin-bottom: 32px;">
+          With over 20,000 images delivered across weddings, concerts, state conferences, theatrical performances, and village outreaches — I don't just point a camera. I look for the split-second narrative in every frame.
+        </p>
+        
+        <div style="display: flex; gap: 40px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px;">
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--off-white);">12+</h4>
+            <p style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--slate-light); margin-top: 8px;">Years Active</p>
+          </div>
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--off-white);">Lagos</h4>
+            <p style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--slate-light); margin-top: 8px;">Based</p>
+          </div>
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--off-white);">Global</h4>
+            <p style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--slate-light); margin-top: 8px;">Reach</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="../images/logo.png" alt="Samstev Lensman" />
+    </div>
+    <p class="footer__copy">© 2025 Samstev Lensman. All rights reserved.</p>
+    <ul class="footer__nav">
+      <li><a href="about.html" style="color: var(--off-white);">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script src="../script.js"></script>
+  <!-- Basic styling for the about responsive grid -->
+  <style>
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</body>
 </html>

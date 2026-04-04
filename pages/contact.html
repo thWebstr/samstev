@@ -1,36 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Samstev Lensman | Book a Session</title>
-  <meta name="description"
-    content="Get in touch with Samstev Lensman to book a session, request pricing or inquire about availability for weddings, portraits, events and commercial photography.">
-  <meta name="keywords"
-    content="Contact Samstev Lensman, Book a photographer, Session booking, Photography pricing, Photographer availability, Contact form">
-  <meta name="author" content="Samstev Lensman">
-  <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="../styles/animations.css">
-  <link rel="stylesheet" href="../styles/m_query.css">
-  <link rel="canonical" href="https://yourdomain.com/pages/contact.html">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Contact — Samstev Lensman",
-    "description":"Get in touch with Samstev Lensman to book a session, request pricing or inquire about availability for weddings, portraits, events and commercial photography."
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Samstev Lensman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,300;1,9..40,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-
 <body>
 
-</body>
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
 
+  <!-- ░░ NAV ░░ -->
+  <header class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">
+      <img src="../images/logo.png" alt="Samstev Lensman" />
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" style="color: var(--off-white);">Contact</a>
+    </nav>
+    <a href="https://wa.me/2349037733412" class="nav__cta" target="_blank" rel="noopener">Book a Session</a>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ░░ CONTACT SECTION ░░ -->
+  <section class="section" style="padding-top: 180px; padding-bottom: 120px; background: var(--navy);">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;" class="contact-grid">
+      
+      <!-- Connect Left -->
+      <div class="reveal">
+        <p class="eyebrow">Connect</p>
+        <h1 class="section__title" style="font-size: clamp(48px, 8vw, 80px); margin-bottom: 24px;">Let's Talk<br /><em>Vision</em></h1>
+        <p style="font-size: 15px; color: var(--off-white-dim); line-height: 1.8; max-width: 400px; margin-bottom: 48px;">
+          Whether you're planning an intimate gathering, a corporate overhaul, or a massive wedding, I'm here to bring your vision into sharp focus.
+        </p>
+        
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 18px; color: var(--off-white); margin-bottom: 8px;">Email Address</h4>
+            <a href="mailto:hello@samstev.com" style="color: var(--off-white-dim); text-decoration: none; font-size: 14px;">hello@samstev.com</a>
+          </div>
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 18px; color: var(--off-white); margin-bottom: 8px;">Phone / WhatsApp</h4>
+            <a href="https://wa.me/2349037733412" style="color: var(--off-white-dim); text-decoration: none; font-size: 14px;">+234 903 773 3412</a>
+          </div>
+          <div>
+            <h4 style="font-family: var(--font-display); font-size: 18px; color: var(--off-white); margin-bottom: 8px;">Location</h4>
+            <p style="color: var(--off-white-dim); font-size: 14px;">Lagos, Nigeria (Available for global travel)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Right -->
+      <div class="reveal" data-delay="1" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); padding: 48px; border-radius: 12px;">
+        <h3 style="font-family: var(--font-display); font-size: 24px; color: var(--off-white); margin-bottom: 32px;">Send an Inquiry</h3>
+        <form style="display: flex; flex-direction: column; gap: 24px;">
+          <input type="text" placeholder="Full Name" style="background: transparent; border: none; border-bottom: 1px solid rgba(241,237,229,0.2); padding: 16px 0; color: var(--white); outline: none; font-family: var(--font-body); font-size: 14px;" />
+          <input type="email" placeholder="Email Address" style="background: transparent; border: none; border-bottom: 1px solid rgba(241,237,229,0.2); padding: 16px 0; color: var(--white); outline: none; font-family: var(--font-body); font-size: 14px;" />
+          <input type="text" placeholder="Project Type / Date" style="background: transparent; border: none; border-bottom: 1px solid rgba(241,237,229,0.2); padding: 16px 0; color: var(--white); outline: none; font-family: var(--font-body); font-size: 14px;" />
+          <textarea placeholder="Tell me about your vision..." rows="4" style="background: transparent; border: none; border-bottom: 1px solid rgba(241,237,229,0.2); padding: 16px 0; color: var(--white); outline: none; font-family: var(--font-body); font-size: 14px; resize: none;"></textarea>
+          <button type="button" class="btn btn--primary" style="margin-top: 16px; border: none; cursor: pointer; align-self: flex-start;">Submit Inquiry</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="../images/logo.png" alt="Samstev Lensman" />
+    </div>
+    <p class="footer__copy">© 2025 Samstev Lensman. All rights reserved.</p>
+    <ul class="footer__nav">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" style="color: var(--off-white);">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script src="../script.js"></script>
+  <style>
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
+    }
+  </style>
+</body>
 </html>

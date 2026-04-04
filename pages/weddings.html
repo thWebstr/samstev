@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weddings — Samstev Lensman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <header class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">
+      <img src="../images/logo.png" alt="Samstev Lensman" />
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="gallery.html" style="color: var(--off-white);">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="https://wa.me/2349037733412" class="nav__cta" target="_blank" rel="noopener">Book a Session</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <section class="section" style="padding-top: 180px; padding-bottom: 60px; background: var(--black);">
+    <div class="gallery__header">
+      <div class="reveal">
+        <p class="eyebrow">category</p>
+        <h1 class="section__title" style="font-size: clamp(48px, 8vw, 100px);">Weddings</h1>
+      </div>
+      <div class="gallery__filters reveal" id="filters">
+        <button class="filter" data-filter="all" onclick="window.location.href='gallery.html'">All</button>
+        <button class="filter active" data-filter="weddings">Weddings</button>
+        <button class="filter" data-filter="corporate" onclick="window.location.href='corporate.html'">Corporate</button>
+        <button class="filter" data-filter="documentary" onclick="window.location.href='documentary.html'">Documentary</button>
+        <button class="filter" data-filter="birthdays" onclick="window.location.href='birthdays.html'">Birthdays</button>
+      </div>
+    </div>
+
+    <!-- 6 item masonry -->
+    <div class="gallery__bento reveal" id="galleryBento" style="margin-top: 48px;">
+      <div class="g-cell"><img src="../images/weddings/wedding_007.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_008.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_009.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_010.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_011.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_012.jpg" loading="lazy" /></div>
+      
+      <div class="g-cell"><img src="../images/weddings/wedding_013.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_014.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_015.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_016.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_017.jpg" loading="lazy" /></div>
+      <div class="g-cell"><img src="../images/weddings/wedding_018.jpg" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__logo"><img src="../images/logo.png" /></div>
+    <p class="footer__copy">© 2025 Samstev Lensman.</p>
+    <ul class="footer__nav">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
