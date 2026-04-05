@@ -38,13 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 2. NAV SCROLL BEHAVIOUR ───────────────────────────── */
   const nav = document.getElementById('nav');
+  let lastScrollY = window.scrollY;
 
   const onScroll = () => {
-    if (window.scrollY > 60) {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > 60) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
     }
+
+    // Hide if scrolling down past 80px, Show if scrolling up
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      nav.classList.add('nav--hidden');
+    } else {
+      nav.classList.remove('nav--hidden');
+    }
+    lastScrollY = currentScrollY;
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -58,8 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
     burger.classList.toggle('open', isOpen);
+    nav.classList.toggle('menu-open', isOpen);
     // Prevent body scroll when menu open
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    document.documentElement.style.overflow = isOpen ? 'hidden' : '';
   });
 
   // Close menu on link click
@@ -67,7 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       burger.classList.remove('open');
+      nav.classList.remove('menu-open');
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     });
   });
 
