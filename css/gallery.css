@@ -36,9 +36,11 @@
     background 0.25s,
     color 0.25s;
 }
+
 .filter:last-child {
   border-right: none;
 }
+
 .filter:hover,
 .filter.active {
   background: var(--slate);
@@ -84,11 +86,9 @@
   left: 0;
   right: 0;
   padding: 24px 14px 14px;
-  background: linear-gradient(
-    to top,
-    rgba(8, 10, 15, 0.85) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to top,
+      rgba(8, 10, 15, 0.85) 0%,
+      transparent 100%);
   font-family: var(--font-body);
   font-size: 10px;
   letter-spacing: 0.22em;
@@ -100,6 +100,7 @@
     opacity 0.3s,
     transform 0.3s;
 }
+
 .g-cell:hover .g-label {
   opacity: 1;
   transform: translateY(0);
@@ -109,6 +110,7 @@
 .g-cell {
   height: 100%;
 }
+
 /* Desktop: 4 columns. Total items: 6. Fits perfectly without gaps.
    Row 1-2: [1: 2x2], [2: 1x1], [3: 1x2] (right)
    Row 2:   [1: cont], [4: 1x1], [3: cont]
@@ -117,22 +119,27 @@
   grid-column: span 2;
   grid-row: span 2;
 }
+
 .g-cell:nth-child(6n + 2) {
   grid-column: span 1;
   grid-row: span 1;
 }
+
 .g-cell:nth-child(6n + 3) {
   grid-column: span 1;
   grid-row: span 2;
 }
+
 .g-cell:nth-child(6n + 4) {
   grid-column: span 1;
   grid-row: span 1;
 }
+
 .g-cell:nth-child(6n + 5) {
   grid-column: span 2;
   grid-row: span 1;
 }
+
 .g-cell:nth-child(6n + 6) {
   grid-column: span 2;
   grid-row: span 1;
@@ -152,10 +159,12 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 240px;
   }
+
   .g-cell:nth-child(6n + 1) {
     grid-column: span 2;
     grid-row: span 2;
   }
+
   .g-cell:nth-child(6n + 2),
   .g-cell:nth-child(6n + 3),
   .g-cell:nth-child(6n + 5),
@@ -163,6 +172,7 @@
     grid-column: span 1;
     grid-row: span 1;
   }
+
   .g-cell:nth-child(6n + 4) {
     grid-column: span 2;
     grid-row: span 1;
@@ -175,6 +185,7 @@
     align-items: flex-start;
     gap: 16px;
   }
+
   .gallery__filters {
     width: calc(100% + (2 * var(--gutter)));
     margin-left: calc(-1 * var(--gutter));
@@ -185,12 +196,15 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
+
   .gallery__filters::-webkit-scrollbar {
     display: none;
   }
+
   .filter {
     white-space: nowrap;
   }
+
   .gallery__bento {
     grid-template-columns: minmax(0, 1fr);
     width: 95%;
@@ -199,6 +213,7 @@
     grid-auto-rows: 320px;
     gap: 12px;
   }
+
   .g-cell,
   .g-cell:nth-child(n) {
     grid-column: 1 / -1 !important;
@@ -215,8 +230,36 @@
     gap: 8px;
   }
 
+  .g-cell {
+    width: 100%;
+  }
+
   .g-cell:nth-child(n) {
     grid-column: span 1;
     aspect-ratio: 4/3;
+  }
+
+  /* Mobile safety: ensure the bento and images never overflow viewport */
+  .gallery__bento {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .g-cell {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .g-cell img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
   }
 }
