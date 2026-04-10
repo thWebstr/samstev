@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 1. CUSTOM CURSOR ──────────────────────────────────── */
-  const cursor      = document.getElementById('cursor');
+  const cursor = document.getElementById('cursor');
   const cursorTrail = document.getElementById('cursorTrail');
 
   let mouseX = 0, mouseY = 0;
@@ -39,8 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── 2. NAV SCROLL BEHAVIOUR ───────────────────────────── */
   const nav = document.getElementById('nav');
   let lastScrollY = window.scrollY;
+  let ticking = false;
+  const delta = 8; // minimum scroll change to consider
 
-  const onScroll = () => {
+  const updateNav = () => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > 60) {
@@ -49,22 +51,46 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('scrolled');
     }
 
-    // Hide if scrolling down past 80px, Show if scrolling up
+    // Respect open menu: keep nav visible while menu open
+    if (nav.classList.contains('menu-open')) {
+      nav.classList.remove('nav--hidden');
+      lastScrollY = currentScrollY;
+      ticking = false;
+      return;
+    }
+
+    if (Math.abs(currentScrollY - lastScrollY) <= delta) {
+      // ignore small changes
+      ticking = false;
+      return;
+    }
+
     if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // scrolling down -> hide nav
       nav.classList.add('nav--hidden');
-    } else {
+    } else if (currentScrollY < lastScrollY) {
+      // scrolling up -> show nav
       nav.classList.remove('nav--hidden');
     }
+
     lastScrollY = currentScrollY;
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateNav);
+      ticking = true;
+    }
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
+  updateNav(); // run once on load
 
 
   /* ── 3. MOBILE BURGER MENU ─────────────────────────────── */
-  const burger    = document.getElementById('burger');
-  const navLinks  = document.getElementById('navLinks');
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
 
   burger.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
@@ -123,9 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const runCounter = (el) => {
-    const target  = parseInt(el.dataset.target, 10);
+    const target = parseInt(el.dataset.target, 10);
     const duration = 1800; // ms
-    const steps   = 60;
+    const steps = 60;
     const increment = target / steps;
     let current = 0;
     let step = 0;
@@ -134,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
       step++;
       // Ease-out: slow down near end
       const progress = step / steps;
-      const eased    = 1 - Math.pow(1 - progress, 3);
+      const eased = 1 - Math.pow(1 - progress, 3);
       current = target * eased;
 
       el.textContent = formatNum(current, target);
@@ -172,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ── 6. GALLERY FILTER ─────────────────────────────────── */
-  const filters     = document.querySelectorAll('.filter');
+  const filters = document.querySelectorAll('.filter');
   const galleryCells = document.querySelectorAll('.g-cell');
 
   filters.forEach(btn => {
@@ -187,12 +213,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const matches = cat === 'all' || cell.dataset.cat === cat;
 
         if (matches) {
-          cell.style.opacity    = '1';
-          cell.style.transform  = 'scale(1)';
+          cell.style.opacity = '1';
+          cell.style.transform = 'scale(1)';
           cell.style.pointerEvents = 'auto';
         } else {
-          cell.style.opacity    = '0.1';
-          cell.style.transform  = 'scale(0.97)';
+          cell.style.opacity = '0.1';
+          cell.style.transform = 'scale(0.97)';
           cell.style.pointerEvents = 'none';
         }
 
@@ -222,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         e.preventDefault();
         const offset = 80; // nav height
-        const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
